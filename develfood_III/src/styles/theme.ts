@@ -12,5 +12,9 @@ export default {
         attention: '#FF0000'
     },
 
-    
+    fonts: {
+        regular_400: 'Roboto_Regular',
+        medium_500: 'Roboto_Medium',
+        bold_700: 'Roboto_Bold'
+    }
 }
