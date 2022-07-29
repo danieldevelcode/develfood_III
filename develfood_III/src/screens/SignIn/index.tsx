@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useTheme } from 'styled-components'
-import { Alert, Animated, Image, Keyboard, StatusBar, Text, TouchableOpacity, TouchableWithoutFeedback } from 'react-native'
+import { Alert, Animated, Image, Keyboard, Platform, StatusBar, Text, TouchableOpacity, TouchableWithoutFeedback } from 'react-native'
 import { 
   Container, 
   Content, 
@@ -17,7 +17,7 @@ import Logo from '../../assets/logo.png';
 import Image2 from '../../assets/img.png';
 import burguer from '../../assets/burguer.png';
 import pizza from '../../assets/pizza.png';
-import { isEmail } from '../../utils'
+import { isEmail } from '../../validates'
 
 export function SignIn() {
   const [password, setPassword] = useState('');
@@ -73,7 +73,9 @@ export function SignIn() {
     <>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <Container>
-            <Animated.View style={{width: '100%', transform: [ { translateY: animated} ] }}>
+            <Animated.View 
+              style={{width: '100%', transform: Platform.OS === 'ios' ? undefined : [{translateY: animated}] }}
+            >
             <ContentImage>
               <Image resizeMode='contain' source={burguer} />
               <Image resizeMode='contain' source={pizza} />
