@@ -5,16 +5,20 @@ export default {
 
         success: '#39B100',
 
+        label: '#68484A',
+        
         yellow: '#FFB84D',
         
         shape: '#BFBABA',
 
-        attention: '#FF0000'
+        attention: '#FF0000',
+
+        dark: '#000'
     },
 
     fonts: {
-        regular_400: 'Roboto_Regular',
-        medium_500: 'Roboto_Medium',
-        bold_700: 'Roboto_Bold'
+        regular_400: 'Roboto-Regular',
+        medium_500: 'Roboto-Medium',
+        bold_700: 'Roboto-Bold'
     }
 }
